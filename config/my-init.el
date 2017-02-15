@@ -18,6 +18,13 @@
     (interactive)
     (string-equal system-type "windows-nt"))
 
+;; Place custom settings in their own file.
+(setq custom-file (concat user-emacs-directory "custom.el"))
+(when (file-exists-p custom-file)
+  (load custom-file))
+
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (eval-when-compile (require 'cl))
 (require 'cl-lib)
