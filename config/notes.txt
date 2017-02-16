@@ -143,5 +143,5 @@ emacs позволяет указывать нужную кодировку дл
 http://reangdblog.blogspot.com/2015/09/emacs.html
 
 отображение непечатаемых символов
-http://reangdblog.blogspot.com/2015/09/emacs_29.html
+http://reangdblog.blogspot.com/2015/06/emacs_29.html
 ###############################################################################
