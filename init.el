@@ -14,7 +14,6 @@
 (require 'cl)
 
 ;; Packages list
-
 (defvar required-packages
                 '(evil
                   evil-leader
@@ -67,13 +66,14 @@
 (require 'my-interaction)
 (require 'my-buffers)
 (require 'my-ag)    ;; configure
+; (require 'my-autocomplete)
 (require 'my-dired) ;; configure
 (require 'my-neotree)  ;; configure
 (require 'my-ido)  ;; configure
 (require 'my-languages)
 (require 'my-evil)
-; (require 'my-help)
-; (require 'my-info)
+(require 'my-help)
+(require 'my-info)
 ; (require 'my-eshell)
 ; (require 'my-package-list)
 ; (require 'my-bookmarks)

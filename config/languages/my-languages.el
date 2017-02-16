@@ -10,7 +10,7 @@
 ;; (require 'my-rust)
 ;; (require 'my-scss)
 ;; (require 'my-haskell)
-; (require 'my-markdown)
+(require 'my-markdown)
 ; (require 'my-cl)
 ; (require 'my-org)
 ;; (require 'my-javascript)
