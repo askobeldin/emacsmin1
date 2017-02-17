@@ -12,7 +12,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(Info-quoted ((t (:background "ivory" :height 100 :family "DejaVu Sans Mono"))))
- '(font-lock-comment-face ((t (:foreground "gray40"))))
+ '(font-lock-comment-face ((t (:foreground "gray45"))))
  '(font-lock-string-face ((t (:foreground "dark red"))))
  '(font-lock-type-face ((t (:foreground "medium blue"))))
  '(font-lock-variable-name-face ((t (:foreground "magenta4")))))

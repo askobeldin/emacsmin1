@@ -26,15 +26,15 @@
        ace-jump-buffer-other-window)
       :ensure ace-jump-buffer)))
 
-(use-package guide-key
-  :ensure guide-key
-  :diminish guide-key-mode
-  :config
-  (progn
-    (setq guide-key/guide-key-sequence '("C-x" "C-c"))
-    (setq guide-key/recursive-key-sequence-flag t)
-    (guide-key-mode 1)
-    (setq guide-key/idle-delay 1.0)
-    (setq guide-key/popup-window-position 'top)))
+; (use-package guide-key
+  ; :ensure guide-key
+  ; :diminish guide-key-mode
+  ; :config
+  ; (progn
+    ; (setq guide-key/guide-key-sequence '("C-x" "C-c"))
+    ; (setq guide-key/recursive-key-sequence-flag t)
+    ; (guide-key-mode 1)
+    ; (setq guide-key/idle-delay 1.0)
+    ; (setq guide-key/popup-window-position 'top)))
 
 (provide 'my-interaction)

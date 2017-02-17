@@ -14,10 +14,10 @@
 (setq ibuffer-saved-filter-groups
           (quote (("default"
                    ("Dired" (mode . dired-mode))
-                   ("Python" (mode . python-mode))
-                   ; ("wiki" (or
-                            ; (filename . (concat (getenv "HOME") "/wiki"))
-                            ; (filename . (concat (getenv "HOME") ".gitit"))))
+                   ("Code" (or 
+                             (mode . python-mode)
+                             (mode . emacs-lisp-mode)
+                             (mode . lisp-mode)))
                    ("Planner" (or
                              (name . "^\\*Calendar\\*$")
                              (name . "^diary$")
@@ -25,13 +25,15 @@
                    ("emacs" (or
                               (name . "^\\*scratch\\*$")
                               (name . "^\\*Messages\\*$")))
-                   ("*buffer*" (name . "\\*.*\\*"))
                    ("Web Dev" (or (mode . html-mode)
+                                  (mode . json-mode)
                                   (mode . css-mode)))
 				   ("Help" (or
                              (name . "\*Help\*")
 							 (name . "\*Apropos\*")
 							 (name . "\*info\*")))
+                   ("emacs created" (or
+                                      (name . "^\\*")))
                    ))))
 
 ;; apply 

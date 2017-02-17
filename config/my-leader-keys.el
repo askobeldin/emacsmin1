@@ -2,6 +2,14 @@
 ;; <leader> keybindings for evil-leader
 ;;
 
+
+;; create a function for jumping between buffers from files
+;; name of function: `ace-jump-thefiles-buffers'
+(make-ace-jump-buffer-function "thefiles"
+  (with-current-buffer buffer
+    (not (buffer-file-name buffer))))
+
+
 (evil-leader/set-key
         "w"          'save-buffer
         "qq"         'kill-this-buffer
@@ -27,7 +35,8 @@
         "TAB"        'my-hop-around-buffers
         "b"          'ibuffer
         "B"          'switch-to-buffer
-        "jb"         'ace-jump-buffer
+        ;; "jb"         'ace-jump-buffer
+        "jb"         'ace-jump-thefiles-buffers
 
         ;; find file or url
         "jf"         'ffap
