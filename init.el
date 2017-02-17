@@ -26,6 +26,7 @@
                   neotree
                   faff-theme
                   ace-jump-buffer
+                  json-mode
                   ))
 
 
@@ -75,7 +76,7 @@
 (require 'my-help)
 (require 'my-info)
 ; (require 'my-eshell)
-; (require 'my-package-list)
+(require 'my-package-list)
 ; (require 'my-bookmarks)
 ; (require 'my-ielm)
 ; (require 'my-sly)

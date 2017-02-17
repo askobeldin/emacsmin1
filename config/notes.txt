@@ -145,3 +145,14 @@ http://reangdblog.blogspot.com/2015/09/emacs.html
 отображение непечатаемых символов
 http://reangdblog.blogspot.com/2015/06/emacs_29.html
 ###############################################################################
+json-mode
+---------
+
+C-c C-f  -- 'jsom-mode-beautify
+C-c C-p  -- 'json-mode-show-path
+###############################################################################
+helm info
+---------
+
+https://github.com/emacs-helm/helm/wiki
+http://tuhdo.github.io/helm-intro.html
