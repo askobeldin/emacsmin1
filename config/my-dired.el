@@ -48,6 +48,7 @@
 
 (defun my-configure-dired ()
   "Setup dired and dired-x. For use with dired-mode-hook."
+  (hl-line-mode t)
   (dired-omit-mode 1))
 
 (add-hook 'dired-mode-hook 'my-configure-dired)

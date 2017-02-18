@@ -27,6 +27,7 @@
                   faff-theme
                   ace-jump-buffer
                   json-mode
+                  popup-switcher
                   ))
 
 
@@ -77,7 +78,7 @@
 (require 'my-info)
 ; (require 'my-eshell)
 (require 'my-package-list)
-; (require 'my-bookmarks)
+(require 'my-bookmarks)
 ; (require 'my-ielm)
 ; (require 'my-sly)
 ; (require 'my-helm)

@@ -28,89 +28,90 @@
                    ("Web Dev" (or (mode . html-mode)
                                   (mode . json-mode)
                                   (mode . css-mode)))
-				   ("Help" (or
+                   ("Help" (or
                              (name . "\*Help\*")
-							 (name . "\*Apropos\*")
-							 (name . "\*info\*")))
+                             (name . "\*Apropos\*")
+                             (name . "\*info\*")))
                    ("emacs created" (or
                                       (name . "^\\*")))
                    ))))
 
 ;; apply 
 (add-hook 'ibuffer-mode-hook
-	'(lambda ()
-		(ibuffer-switch-to-saved-filter-groups "default")))
+    '(lambda ()
+       (hl-line-mode t)
+       (ibuffer-switch-to-saved-filter-groups "default")))
 
 ;; don't show empty filter groups
 (setq ibuffer-show-empty-filter-groups nil)
 
 ;; keybindings
 (eval-after-load 'ibuffer
-				 '(progn
-					(evil-set-initial-state 'ibuffer-mode 'normal)
-					(evil-define-key 'normal ibuffer-mode-map
+                 '(progn
+                    (evil-set-initial-state 'ibuffer-mode 'normal)
+                    (evil-define-key 'normal ibuffer-mode-map
 
-						[backtab] 'ibuffer-toggle-filter-group
-						[tab] 'ibuffer-toggle-filter-group
+                        [backtab] 'ibuffer-toggle-filter-group
+                        [tab] 'ibuffer-toggle-filter-group
 
-						(kbd "0") 'digit-argument
-						(kbd "1") 'digit-argument
-						(kbd "2") 'digit-argument
-						(kbd "3") 'digit-argument
-						(kbd "4") 'digit-argument
-						(kbd "5") 'digit-argument
-						(kbd "6") 'digit-argument
-						(kbd "7") 'digit-argument
-						(kbd "8") 'digit-argument
-						(kbd "9") 'digit-argument
+                        (kbd "0") 'digit-argument
+                        (kbd "1") 'digit-argument
+                        (kbd "2") 'digit-argument
+                        (kbd "3") 'digit-argument
+                        (kbd "4") 'digit-argument
+                        (kbd "5") 'digit-argument
+                        (kbd "6") 'digit-argument
+                        (kbd "7") 'digit-argument
+                        (kbd "8") 'digit-argument
+                        (kbd "9") 'digit-argument
 
-						(kbd "m") 'ibuffer-mark-forward
-						(kbd "v") 'ibuffer-toggle-marks
-						(kbd "u") 'ibuffer-unmark-forward
+                        (kbd "m") 'ibuffer-mark-forward
+                        (kbd "v") 'ibuffer-toggle-marks
+                        (kbd "u") 'ibuffer-unmark-forward
 
-						(kbd "j") 'evil-next-line
-						(kbd "k") 'evil-previous-line
-						(kbd "DEL") 'ibuffer-unmark-backward
-						(kbd "* *") 'ibuffer-unmark-all
+                        (kbd "j") 'evil-next-line
+                        (kbd "k") 'evil-previous-line
+                        (kbd "DEL") 'ibuffer-unmark-backward
+                        (kbd "* *") 'ibuffer-unmark-all
 
-						(kbd "d") 'ibuffer-mark-for-delete
-						(kbd "x") 'ibuffer-do-kill-on-deletion-marks
+                        (kbd "d") 'ibuffer-mark-for-delete
+                        (kbd "x") 'ibuffer-do-kill-on-deletion-marks
 
-						;; immediate operations
-						(kbd "n") 'ibuffer-forward-filter-group
-						(kbd "SPC") 'forward-line
-						(kbd "g") 'ibuffer-update
+                        ;; immediate operations
+                        (kbd "n") 'ibuffer-forward-filter-group
+                        (kbd "SPC") 'forward-line
+                        (kbd "g") 'ibuffer-update
 
-						"-" 'ibuffer-add-to-tmp-hide
-						"+" 'ibuffer-add-to-tmp-show
+                        "-" 'ibuffer-add-to-tmp-hide
+                        "+" 'ibuffer-add-to-tmp-show
 
-						(kbd "s i") 'ibuffer-invert-sorting
-						(kbd "s a") 'ibuffer-do-sort-by-alphabetic
-						(kbd "s v") 'ibuffer-do-sort-by-recency
-						(kbd "s s") 'ibuffer-do-sort-by-size
-						(kbd "s f") 'ibuffer-do-sort-by-filename/process
-						(kbd "s m") 'ibuffer-do-sort-by-major-mode
+                        (kbd "s i") 'ibuffer-invert-sorting
+                        (kbd "s a") 'ibuffer-do-sort-by-alphabetic
+                        (kbd "s v") 'ibuffer-do-sort-by-recency
+                        (kbd "s s") 'ibuffer-do-sort-by-size
+                        (kbd "s f") 'ibuffer-do-sort-by-filename/process
+                        (kbd "s m") 'ibuffer-do-sort-by-major-mode
 
-						;; marked operation
-						(kbd "A") 'ibuffer-do-view
-						(kbd "D") 'ibuffer-do-delete
-						(kbd "E") 'ibuffer-do-eval
-						(kbd "F") 'ibuffer-do-shell-command-file
-						(kbd "I") 'ibuffer-do-query-replace-regexp
-						(kbd "H") 'ibuffer-do-view-other-frame
-						(kbd "P") 'ibuffer-do-shell-command-pipe-replace
-						(kbd "M") 'ibuffer-do-toggle-modified
-						(kbd "O") 'ibuffer-do-occur
-						;; (kbd "P") 'ibuffer-do-print
-						(kbd "Q") 'ibuffer-do-query-replace
-						(kbd "R") 'ibuffer-do-rename-uniquely
-						(kbd "S") 'ibuffer-do-save
-						(kbd "T") 'ibuffer-do-toggle-read-only
-						(kbd "U") 'ibuffer-do-replace-regexp
-						(kbd "V") 'ibuffer-do-revert
-						(kbd "W") 'ibuffer-do-view-and-eval
-						(kbd "X") 'ibuffer-do-shell-command-pipe
-						)))
+                        ;; marked operation
+                        (kbd "A") 'ibuffer-do-view
+                        (kbd "D") 'ibuffer-do-delete
+                        (kbd "E") 'ibuffer-do-eval
+                        (kbd "F") 'ibuffer-do-shell-command-file
+                        (kbd "I") 'ibuffer-do-query-replace-regexp
+                        (kbd "H") 'ibuffer-do-view-other-frame
+                        (kbd "P") 'ibuffer-do-shell-command-pipe-replace
+                        (kbd "M") 'ibuffer-do-toggle-modified
+                        (kbd "O") 'ibuffer-do-occur
+                        ;; (kbd "P") 'ibuffer-do-print
+                        (kbd "Q") 'ibuffer-do-query-replace
+                        (kbd "R") 'ibuffer-do-rename-uniquely
+                        (kbd "S") 'ibuffer-do-save
+                        (kbd "T") 'ibuffer-do-toggle-read-only
+                        (kbd "U") 'ibuffer-do-replace-regexp
+                        (kbd "V") 'ibuffer-do-revert
+                        (kbd "W") 'ibuffer-do-view-and-eval
+                        (kbd "X") 'ibuffer-do-shell-command-pipe
+                        )))
 
 (provide 'my-buffers)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -190,14 +191,14 @@
 
 ;; ;; Modify the default ibuffer-formats
 ;;   (setq ibuffer-formats
-;; 	'((mark modified read-only " "
-;; 		(name 18 18 :left :elide)
-;; 		" "
-;; 		(size-h 9 -1 :right)
-;; 		" "
-;; 		(mode 16 16 :left :elide)
-;; 		" "
-;; 		filename-and-process)))
+;;  '((mark modified read-only " "
+;;      (name 18 18 :left :elide)
+;;      " "
+;;      (size-h 9 -1 :right)
+;;      " "
+;;      (mode 16 16 :left :elide)
+;;      " "
+;;      filename-and-process)))
 
 
 ;; Have some buffer groups collapsed by default
@@ -209,16 +210,16 @@
 ;; (setq mp/ibuffer-collapsed-groups (list "Helm" "*Internal*"))
 ;; (defadvice ibuffer (after collapse-helm)
 ;;   (dolist (group mp/ibuffer-collapsed-groups)
-;; 	  (progn
-;; 	    (goto-char 1)
-;; 	    (when (search-forward (concat "[ " group " ]") (point-max) t)
-;; 	      (progn
-;; 		(move-beginning-of-line nil)
-;; 		(ibuffer-toggle-filter-group)
-;; 		)
-;; 	      )
-;; 	    )
-;; 	  )
+;;    (progn
+;;      (goto-char 1)
+;;      (when (search-forward (concat "[ " group " ]") (point-max) t)
+;;        (progn
+;;      (move-beginning-of-line nil)
+;;      (ibuffer-toggle-filter-group)
+;;      )
+;;        )
+;;      )
+;;    )
 ;;     (goto-char 1)
 ;;     (search-forward "[ " (point-max) t)
 ;;   )

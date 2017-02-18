@@ -37,4 +37,16 @@
     ; (setq guide-key/idle-delay 1.0)
     ; (setq guide-key/popup-window-position 'top)))
 
+
+;; popup-switcher
+(require 'popup-switcher)
+(setq psw-popup-menu-max-length 15)
+;; values: fill-column (default)
+;;         center
+;;         point
+(setq psw-popup-position 'point)
+;; fuzzy matching -- needs flx-ido
+(setq psw-use-flx t)
+
+
 (provide 'my-interaction)

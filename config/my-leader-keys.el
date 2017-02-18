@@ -16,7 +16,7 @@
         "qw"         'evil-window-delete
         "Q"          'kill-buffer-and-window
 
-        ; ">"          'find-file-at-point
+        ">"          'find-file-at-point
 
         "\\"         'split-window-horizontally
         "-"          'split-window-vertically
@@ -31,15 +31,22 @@
         ;; Dired
         "d"          'dired
 
-        ;; buffers
+        ;; buffers and switching
         "TAB"        'my-hop-around-buffers
         "b"          'ibuffer
         "B"          'switch-to-buffer
         ;; "jb"         'ace-jump-buffer
         "jb"         'ace-jump-thefiles-buffers
+        ;; popup-switcher config
+        "pb"         'psw-switch-buffer
+        "pr"         'psw-switch-recentf
+        "pn"         'psw-navigate-files
+        "pf"         'psw-switch-function
+        ; "pp"         'psw-switch-projectile-files
+
 
         ;; find file or url
-        "jf"         'ffap
+        "F"         'ffap
 
         ;; helm
         ; "hs"         'helm-swoop
@@ -57,7 +64,7 @@
         ; "P"          'projectile-switch-project
 
         ;; ido
-        "l"          'ido-goto-symbol
+        ;; "l"          'ido-goto-symbol
         "f"          'ido-find-file
 
 )
