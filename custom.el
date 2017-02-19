@@ -3,6 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(bookmark-automatically-show-annotations nil)
  '(package-selected-packages
    (quote
     (markdown-mode key-chord ido-vertical-mode flx-ido ido-ubiquitous smex ag ace-jump-mode ace-jump-buffer faff-theme neotree evil-org evil-lispy evil-visualstar evil-surround evil-matchit evil-nerd-commenter evil-leader evil use-package))))

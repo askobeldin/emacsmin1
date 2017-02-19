@@ -45,6 +45,11 @@
                 "k"         'previous-line
     )
 
+
+(add-hook 'bookmark-bmenu-mode-hook
+          '(lambda ()
+             (hl-line-mode t)))
+
 (evil-set-initial-state 'bookmark-bmenu-mode 'normal)
 
 (provide 'my-bookmarks)

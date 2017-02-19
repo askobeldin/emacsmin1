@@ -9,6 +9,12 @@
   (with-current-buffer buffer
     (not (buffer-file-name buffer))))
 
+(defun my-hop-around-buffers ()
+  "Swap the current buffer with the previous one."
+  (interactive)
+  (switch-to-buffer (other-buffer "*Ibuffer*")))
+
+
 
 (evil-leader/set-key
         "w"          'save-buffer
@@ -66,6 +72,10 @@
         ;; ido
         ;; "l"          'ido-goto-symbol
         "f"          'ido-find-file
+
+        ;; bookmarks actions
+        "ml"          'list-bookmarks
+        "ms"          'bookmark-set
 
 )
 
