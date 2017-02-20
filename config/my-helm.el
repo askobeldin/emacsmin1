@@ -24,14 +24,11 @@
     (define-key helm-map (kbd "C-j") 'helm-next-line)
     (define-key helm-map (kbd "C-k") 'helm-previous-line)
 
-
     (require 'helm-files)
-
 
     (after 'projectile
       (use-package helm-projectile
         :ensure helm-projectile))
-
 
     (defun helm-jump ()
       "Find files with helm, but be smart about buffers and recent files."
@@ -49,7 +46,6 @@
 
     (setq helm-command-prefix-key "C-c h")
     (setq helm-quick-update t)
-
 
     (use-package helm-swoop
       :ensure helm-swoop
