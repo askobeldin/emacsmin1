@@ -28,6 +28,8 @@
                   ace-jump-buffer
                   json-mode
                   popup-switcher
+                  helm
+                  helm-swoop
                   ))
 
 
@@ -81,7 +83,7 @@
 (require 'my-bookmarks)
 ; (require 'my-ielm)
 ; (require 'my-sly)
-; (require 'my-helm)
+(require 'my-helm)
 ; (require 'my-magit)
 ; (require 'my-projects)
 (require 'my-leader-keys)

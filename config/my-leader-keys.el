@@ -55,8 +55,8 @@
         "F"         'ffap
 
         ;; helm
-        ; "hs"         'helm-swoop
-        ; "hi"         'helm-imenu
+        "hs"         'helm-swoop
+        "hi"         'helm-imenu
 
         ;; silversearcer (ag)
         "sr"         'ag-regexp
@@ -70,7 +70,7 @@
         ; "P"          'projectile-switch-project
 
         ;; ido
-        ;; "l"          'ido-goto-symbol
+        "l"          'ido-goto-symbol
         "f"          'ido-find-file
 
         ;; bookmarks actions
