@@ -31,6 +31,22 @@
                   helm
                   helm-swoop
                   ))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; other packages
+;
+; evil-lispy
+; company
+; sly
+; sly-company
+; projectile
+; magit
+;;; python
+; auto-virtualenv
+; evil-text-object-python
+; yasnippet
+; python-docstring
+; helm-pydoc
+; python-mode
 
 
 (require 'package)
@@ -69,11 +85,11 @@
 (require 'my-ui)
 (require 'my-interaction)
 (require 'my-buffers)
-(require 'my-ag)    ;; configure
+(require 'my-ag)
 ; (require 'my-autocomplete)
-(require 'my-dired) ;; configure
-(require 'my-neotree)  ;; configure
-(require 'my-ido)  ;; configure
+(require 'my-dired)
+(require 'my-neotree)
+(require 'my-ido)
 (require 'my-languages)
 (require 'my-evil)
 (require 'my-help)

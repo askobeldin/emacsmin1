@@ -13,7 +13,9 @@
 ;; the proper ls.
 (if (not (my-system-is-mac))
   ;; (setq dired-listing-switches "-kABhl --group-directories-first")
-  (setq dired-listing-switches "-aBhl --group-directories-first")
+  ;; (setq dired-listing-switches "-aBhl --group-directories-first")
+  ;; (setq dired-listing-switches "-lXGh --group-directories-first")
+  (setq dired-listing-switches "--group-directories-first")
   (setq dired-listing-switches "-kABhl"))
 
 (use-package saveplace

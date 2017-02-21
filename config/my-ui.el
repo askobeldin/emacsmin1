@@ -12,11 +12,6 @@
 (setq use-dialog-box     nil)
 (setq redisplay-dont-pause t)
 
-;; Syntax highlighting
-(require 'font-lock)
-(global-font-lock-mode t)
-(setq font-lock-maximum-decoration t)
-
 ; Keyboard: input method
 ; toggle: C-\
 (setq default-input-method 'russian-computer)
@@ -24,9 +19,19 @@
 ; global Highlight current textline
 ; (global-hl-line-mode t)
 
+;; Syntax highlighting
+(require 'font-lock)
+(global-font-lock-mode t)
+(setq font-lock-maximum-decoration t)
+
 ;; Window size. Set font
-(add-to-list 'default-frame-alist '(width . 100))
-(add-to-list 'default-frame-alist '(height . 70))
+(add-to-list 'default-frame-alist '(width . 110))
+(if (my-system-is-windows)
+  ;; my windows machine
+  (add-to-list 'default-frame-alist '(height . 75))
+  ;; linux
+  (add-to-list 'default-frame-alist '(height . 70)))
+(setq initial-frame-alist '((left . 0) (top . 0)))
 (when (member "DejaVu Sans Mono" (font-family-list))
     (set-frame-font "DejaVu Sans Mono-10:antialias=natural" nil t))
 
@@ -102,6 +107,8 @@ name of the buffer."
 
 ;; Global clipboard
 (setq x-select-enable-clipboard t)
+(if (my-system-is-windows)
+    (set-clipboard-coding-system 'utf-16le-dos))
 
 ;; Highlight search results
 (setq search-highlight t
