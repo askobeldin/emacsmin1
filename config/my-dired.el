@@ -15,7 +15,10 @@
   (progn
   ;; (setq dired-listing-switches "-aBhl --group-directories-first")
   ;; (setq dired-listing-switches "-lXGh --group-directories-first")
-    (setq dired-listing-switches "--group-directories-first"))
+    (require 'ls-lisp)
+    (setq ls-lisp-dirs-first t)
+    (setq ls-lisp-emulation (quote MS-Windows))
+    (setq dired-listing-switches "-1vXGh"))
   (progn
     (setq dired-listing-switches "-kABhl --group-directories-first")))
 
