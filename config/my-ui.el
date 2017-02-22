@@ -30,7 +30,7 @@
   ;; my windows machine
   (add-to-list 'default-frame-alist '(height . 75))
   ;; linux
-  (add-to-list 'default-frame-alist '(height . 70)))
+  (add-to-list 'default-frame-alist '(height . 74)))
 (setq initial-frame-alist '((left . 0) (top . 0)))
 (when (member "DejaVu Sans Mono" (font-family-list))
     (set-frame-font "DejaVu Sans Mono-10:antialias=natural" nil t))

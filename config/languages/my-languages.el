@@ -5,7 +5,7 @@
 
 ;; (require 'my-go)
 ;; (require 'my-latex)
-; (require 'my-python)
+(require 'my-python)
 ;; (require 'my-r)
 ;; (require 'my-rust)
 ;; (require 'my-scss)
@@ -16,7 +16,7 @@
 ;; (require 'my-javascript)
 ;; (require 'my-jade)
 ;; (require 'my-yaml)
-; (require 'my-snippets)
+(require 'my-snippets)
 
 
 (provide 'my-languages)
