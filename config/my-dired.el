@@ -11,12 +11,13 @@
 ;; on OSX, dired's ls binary doesn't support some of the required options.
 ;; Thankfully, I use Homebrew, so I can hack around this and tell it to use
 ;; the proper ls.
-(if (not (my-system-is-mac))
-  ;; (setq dired-listing-switches "-kABhl --group-directories-first")
+(if (my-system-is-windows)
+  (progn
   ;; (setq dired-listing-switches "-aBhl --group-directories-first")
   ;; (setq dired-listing-switches "-lXGh --group-directories-first")
-  (setq dired-listing-switches "--group-directories-first")
-  (setq dired-listing-switches "-kABhl"))
+    (setq dired-listing-switches "--group-directories-first"))
+  (progn
+    (setq dired-listing-switches "-kABhl --group-directories-first")))
 
 (use-package saveplace
   :config
