@@ -30,12 +30,6 @@
                   popup-switcher
                   helm
                   helm-swoop
-                  ;; python packages
-                  evil-text-object-python
-                  yasnippet
-                  python-docstring
-                  helm-pydoc
-                  ; python-mode
                   ))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; other packages

@@ -7,7 +7,8 @@
  '(calendar-date-style (quote european))
  '(package-selected-packages
    (quote
-    (markdown-mode key-chord ido-vertical-mode flx-ido ido-ubiquitous smex ag ace-jump-mode ace-jump-buffer faff-theme neotree evil-org evil-lispy evil-visualstar evil-surround evil-matchit evil-nerd-commenter evil-leader evil use-package))))
+    (markdown-mode key-chord ido-vertical-mode flx-ido ido-ubiquitous smex ag ace-jump-mode ace-jump-buffer faff-theme neotree evil-org evil-lispy evil-visualstar evil-surround evil-matchit evil-nerd-commenter evil-leader evil use-package)))
+ )
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
