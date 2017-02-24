@@ -32,6 +32,7 @@
                   helm-swoop
                   ;; python packages
                   python-mode
+                  sphinx-doc
                   ))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; other packages

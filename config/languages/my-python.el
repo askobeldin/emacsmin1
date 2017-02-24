@@ -12,17 +12,26 @@
       :config
       (progn
         (setq python-indent 4
-            python-indent-offset 4)
+              python-indent-offset 4)
         (setq python-indent-guess-indent-offset nil)
 
-        (setq py-electric-comment-p nil)
-        (setq py-max-help-buffer-p nil)
-        (setq py-electric-comment-add-space-p nil)
-        (setq py-tab-indent nil)
-        (setq py-smart-indentation t)
-        (setq py-complete-function nil)
-        (setq py-empty-line-closes-p nil)
+        (setq py-electric-comment-p t)
+        ;; (setq py-max-help-buffer-p nil)
+        ;; (setq py-electric-comment-add-space-p nil)
+        ;; (setq py-tab-indent nil)
+        ;; (setq py-smart-indentation t)
+        ;; (setq py-complete-function nil)
+        ;; (setq py-empty-line-closes-p nil)
+
+        ;; evil
         (evil-define-key 'insert python-mode-map (kbd "RET") 'electric-newline-and-maybe-indent)))
 
+(add-hook 'python-mode-hook (lambda ()
+                              ;; other config
+                              (set-fill-column 80)
+                              ;; sphinx-doc usage: move the cursor to
+                              ;; some function/method definition and hit C-c M-d
+                              (require 'sphinx-doc)
+                              (sphinx-doc-mode t)))
 
 (provide 'my-python)
