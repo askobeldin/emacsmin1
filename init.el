@@ -30,6 +30,8 @@
                   popup-switcher
                   helm
                   helm-swoop
+                  ;; python packages
+                  python-mode
                   ))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; other packages
