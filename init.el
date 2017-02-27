@@ -30,6 +30,7 @@
                   popup-switcher
                   helm
                   helm-swoop
+                  yasnippet
                   ;; python packages
                   python-mode
                   sphinx-doc

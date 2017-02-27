@@ -34,6 +34,9 @@
 ;; файловую систему бэкапами.
 (setq-default make-backup-files nil)
 
+;; lockfiles are evil.
+(setq create-lockfiles nil)
+
 ;; Это включает автосохранение - пока вы работаете с файлом,
 ;; Emacs время от времени автоматически создает копию, и удаляет её
 ;; как только вы сохрание файл с которым работаете.
@@ -60,16 +63,3 @@
 (defalias 'man 'woman)
 
 (provide 'my-env)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Настройка кодировок и окружения.
-;; Мы хотим чтобы наши файлы с кодом сохранялись в UTF-8,
-;; пока прямо не укажем другое.
-; (set-language-environment 'UTF-8)
-; (setq default-buffer-file-coding-system 'utf-8)
-; (setq-default coding-system-for-read 'utf-8)
-; (setq file-name-coding-system 'utf-8)
-; (set-selection-coding-system 'utf-8)
-; (set-keyboard-coding-system 'utf-8-unix)
-; (set-terminal-coding-system 'utf-8)
-; (prefer-coding-system 'utf-8)

@@ -22,6 +22,9 @@
         ;; (setq py-smart-indentation t)
         ;; (setq py-complete-function nil)
         ;; (setq py-empty-line-closes-p nil)
+        
+        ;; yasnippet
+        (yas-reload-all)
 
         ;; evil
         (evil-define-key 'insert python-mode-map (kbd "RET") 'electric-newline-and-maybe-indent)))
@@ -32,6 +35,8 @@
                               ;; sphinx-doc usage: move the cursor to
                               ;; some function/method definition and hit C-c M-d
                               (require 'sphinx-doc)
-                              (sphinx-doc-mode t)))
+                              (sphinx-doc-mode t)
+                              ;; yasnippet
+                              (yas-minor-mode t)))
 
 (provide 'my-python)

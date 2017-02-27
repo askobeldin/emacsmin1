@@ -24,4 +24,4 @@
  '(py-decorators-face ((t (:inherit font-lock-keyword-face :foreground "purple4"))))
  '(py-number-face ((t (:inherit default :foreground "magenta4"))))
  '(py-variable-name-face ((t (:inherit font-lock-variable-name-face))))
- '(show-paren-match ((t (:background "gold")))))
+ '(show-paren-match ((t (:background "SeaGreen1")))))

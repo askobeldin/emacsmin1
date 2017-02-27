@@ -16,7 +16,7 @@
 ;; (require 'my-javascript)
 ;; (require 'my-jade)
 ;; (require 'my-yaml)
-; (require 'my-snippets)
+(require 'my-snippets)
 
 
 (provide 'my-languages)
