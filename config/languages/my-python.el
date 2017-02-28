@@ -27,7 +27,9 @@
         (yas-reload-all)
 
         ;; evil
-        (evil-define-key 'insert python-mode-map (kbd "RET") 'electric-newline-and-maybe-indent)))
+        (evil-define-key 'insert python-mode-map (kbd "RET") 'electric-newline-and-maybe-indent)
+        ;; yasnippet config
+        (evil-define-key 'insert python-mode-map (kbd "C-c i") 'yas-insert-snippet)))
 
 (add-hook 'python-mode-hook (lambda ()
                               ;; other config
