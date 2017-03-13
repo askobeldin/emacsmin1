@@ -25,15 +25,15 @@
 (setq font-lock-maximum-decoration t)
 
 ;; Window size. Set font
-(add-to-list 'default-frame-alist '(width . 110))
+(add-to-list 'default-frame-alist '(width . 100))
 (if (my-system-is-windows)
   ;; my windows machine
-  (add-to-list 'default-frame-alist '(height . 75))
+  (add-to-list 'default-frame-alist '(height . 70))
   ;; linux
-  (add-to-list 'default-frame-alist '(height . 74)))
+  (add-to-list 'default-frame-alist '(height . 59)))
 (setq initial-frame-alist '((left . 0) (top . 0)))
 (when (member "DejaVu Sans Mono" (font-family-list))
-    (set-frame-font "DejaVu Sans Mono-10:antialias=natural" nil t))
+    (set-frame-font "DejaVu Sans Mono-11:antialias=natural" nil t))
 
 ;; maximize main window when emacs starts
 ; (add-to-list 'default-frame-alist
@@ -115,6 +115,7 @@ name of the buffer."
       query-replace-highlight t)
 
 ;; Cursor for evil mode
+;; try to use classic theme
 (setq evil-default-cursor  '("#cd0000" box))
 (setq evil-normal-state-cursor  '("#00008b" box))
 (setq evil-insert-state-cursor  '("#00008b" (hbar . 3)))
@@ -126,12 +127,13 @@ name of the buffer."
 (load-theme 'faff t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-; (add-to-list 'custom-theme-load-path
-             ; (concat user-emacs-directory "themes"))
+;; theme2 branch
+;; (add-to-list 'custom-theme-load-path
+;;              (concat user-emacs-directory "themes"))
 
-; ;; load my favorite theme
-; (load-theme 'classic t t)
-; (enable-theme 'classic)
+;; ;; load my favorite theme
+;; (load-theme 'classic t t)
+;; (enable-theme 'classic)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Calendar
