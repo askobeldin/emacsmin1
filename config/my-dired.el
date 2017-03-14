@@ -78,13 +78,23 @@
   (dired-previous-line count)
   (dired-move-to-filename))
 
-(defun my-dired-interact-with-file ()
-  "Interact with a dired file!"
-  (interactive)
-  (let ((this-file (dired-get-file-for-visit)))
-    (if (file-directory-p this-file)
-        (dired-maybe-insert-subdir this-file)
-      (dired-find-file))))
+;; try to modify this - branch theme2
+;;
+;; (defun my-dired-interact-with-file ()
+;;   "Interact with a dired file!"
+;;   (interactive)
+;;   (let ((this-file (dired-get-file-for-visit)))
+;;     (if (file-directory-p this-file)
+;;         (dired-maybe-insert-subdir this-file)
+;;       (dired-find-file))))
+
+;; stackoverflow recipe
+(defun my-dired-interact-with-file (&optional arg)
+  "Open each of the marked files, or the file under the point, or when
+prefix arg, the next N files "
+    (interactive "P")
+    (let* ((fn-list (dired-get-marked-files nil arg)))
+        (mapc 'find-file fn-list)))
 
 (defun my-dired-at-title ()
   "Returns the current dir if point is at the title of a directory in

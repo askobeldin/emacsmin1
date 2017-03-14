@@ -28,7 +28,7 @@
 (add-to-list 'default-frame-alist '(width . 100))
 (if (my-system-is-windows)
   ;; my windows machine
-  (add-to-list 'default-frame-alist '(height . 70))
+  (add-to-list 'default-frame-alist '(height . 62))
   ;; linux
   (add-to-list 'default-frame-alist '(height . 59)))
 (setq initial-frame-alist '((left . 0) (top . 0)))
@@ -114,8 +114,7 @@ name of the buffer."
 (setq search-highlight t
       query-replace-highlight t)
 
-;; Cursor for evil mode
-;; try to use classic theme
+;; Cursor for evil mode, `faff' theme
 (setq evil-default-cursor  '("#cd0000" box))
 (setq evil-normal-state-cursor  '("#00008b" box))
 (setq evil-insert-state-cursor  '("#00008b" (hbar . 3)))

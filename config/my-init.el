@@ -23,8 +23,6 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (eval-when-compile (require 'cl))
 (require 'cl-lib)
@@ -35,7 +33,5 @@
   (declare (indent defun))
   `(eval-after-load ,feature
      '(progn ,@body)))
-
-
 
 (provide 'my-init)
